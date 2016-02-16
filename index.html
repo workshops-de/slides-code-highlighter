@@ -12,13 +12,26 @@
 
 <div class="container">
   <h1>Code highlight</h1>
+  <div class="row">
+    <div class="col-sm-12">
+      <label class="radio-inline">
+        <input type="radio" ng-model="language" ng-value="'javascript'"> JavaScript
+      </label>
+      <label class="radio-inline">
+        <input type="radio" ng-model="language" ng-value="'html'"> HTML
+      </label>
+      <label class="radio-inline">
+        <input type="radio" ng-model="language" ng-value=""> Auto
+      </label>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-sm-6">
       <textarea class="form-control" rows="10" ng-model="code"></textarea>
     </div>
     <div class="col-sm-6">
-      <div hljs hljs-source="code"></div>
+      <div hljs hljs-source="code" hljs-language="{{language}}"></div>
     </div>
   </div>
 </div>
