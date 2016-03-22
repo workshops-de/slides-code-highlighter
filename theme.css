@@ -13,7 +13,7 @@ body {
   overflow-x: auto;
   background-color: transparent;
   font-family: Consolas, Monace, monospace;
-  font-size: 22px;
+  font-size: 16pt;
 }
 
 .hljs-comment,
@@ -27,20 +27,30 @@ body {
 .hljs-strong,
 .hljs-emphasis,
 .hljs-quote {
-  color: #df5000;
+  color: #07a;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-type {
-  color: #a71d5d;
+  font-weight: bold;
+  color: #990055;
 }
 
 .hljs-literal,
 .hljs-symbol,
 .hljs-bullet,
 .hljs-attribute {
-  color: #0086b3;
+  color: #0f4d75;
+}
+
+.hljs-number {
+  color: #008c00;
+}
+
+.hljs-built_in {
+  color: #333;
+  font-style: italic;
 }
 
 .hljs-section,
