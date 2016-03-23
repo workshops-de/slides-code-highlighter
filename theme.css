@@ -40,8 +40,12 @@ body {
 .hljs-literal,
 .hljs-symbol,
 .hljs-bullet,
-.hljs-attribute {
+.hljs-value {
   color: #0f4d75;
+}
+
+.hljs-attribute {
+  color: #0086b3;
 }
 
 .hljs-number {
