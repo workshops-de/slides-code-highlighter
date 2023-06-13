@@ -1,90 +1,131 @@
 body {
   background: none;
 }
+
 /**
- * GitHub Gist Theme
- * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ * GHColors theme by Avi Aryan (http://aviaryan.in)
+ * Inspired by Github syntax coloring
  */
 
-.hljs {
-  display: block;
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #333333;
+	font-family: Consolas, Monace, monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	font-size: 16pt;
+	line-height: 1;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre > code[class*="language-"] {
+	font-size: 1em;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	background: #b3d4fc;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
   padding: 0.5em;
-  color: #333333;
-  overflow-x: auto;
-  background-color: transparent;
-  font-family: Consolas, Monace, monospace;
-  font-size: 16pt;
+	margin: .5em 0;
+	overflow: auto;
+	background-color: transparent;
 }
 
-.hljs-comment,
-.hljs-meta {
-  color: #969896;
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .2em;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background: #f8f8f8;
 }
 
-.hljs-string,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-strong,
-.hljs-emphasis,
-.hljs-quote {
-  color: #07a;
+.token.tag,
+.token.number,
+.token.regex,
+.token.url {
+	color: #008c00;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-type {
+.token.keyword,
+.token.selector {
   font-weight: bold;
   color: #990055;
 }
 
-.hljs-literal,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-value {
-  color: #0f4d75;
-}
-
-.hljs-attribute {
-  color: #0086b3;
-}
-
-.hljs-number {
-  color: #008c00;
-}
-
-.hljs-built_in {
-  color: #333;
-  font-style: italic;
-}
-
-.hljs-section,
-.hljs-name {
-  color: #63a35c;
-}
-
-.hljs-tag {
-  color: #333333;
-}
-
-.hljs-title,
-.hljs-attr,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo {
+.token.function,
+.token.attr-name,
+.token.class-name {
   color: #795da3;
 }
 
-.hljs-addition {
+.token.string,
+.token.string-property,
+.token.property,
+.token.attr-value,
+.token.variable,
+.token.constant,
+.token.atrule {
+  color: #07a;
+}
+
+.token.entity,
+.token.boolean,
+.token.symbol {
+  color: #0f4d75;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata,
+.token.coord {
+	color: #969896;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.punctuation,
+.token.operator {
+	color: #333333; /* no highlight */
+}
+
+.token.deleted {
+    color: #bd2c00;
+    background-color: #ffecec;
+}
+
+.token.inserted {
   color: #55a532;
   background-color: #eaffea;
 }
 
-.hljs-deletion {
-  color: #bd2c00;
-  background-color: #ffecec;
+.token.important,
+.token.bold {
+	font-weight: bold;
 }
 
-.hljs-link {
-  text-decoration: underline;
+.token.italic {
+	font-style: italic;
 }
